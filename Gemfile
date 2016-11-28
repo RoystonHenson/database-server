@@ -6,3 +6,5 @@ gem 'rspec-sinatra'
 gem 'coveralls', require: false
 gem 'rake'
 gem 'capybara'
+gem 'data_mapper'
+gem 'dm-postgres-adapter'

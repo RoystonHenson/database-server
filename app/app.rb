@@ -1,5 +1,11 @@
 require 'sinatra/base'
 
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/database_server_#{ENV['RACK_ENV']}")
+
+DataMapper.finalize
+
+DataMapper.auto_upgrade!
+
 class DatabaseServer < Sinatra::Base
 
   get '/' do
