@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './app/models/value.rb'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/database_server_#{ENV['RACK_ENV']}")
 
